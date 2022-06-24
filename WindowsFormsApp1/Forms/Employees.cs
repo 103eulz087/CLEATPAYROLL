@@ -104,7 +104,8 @@ namespace WindowsFormsApp1.Forms
 
         void display()
         {
-            Database.display("SELECT * FROM dbo.view_EMPLOYEE", gridControl1, gridView1);
+            Database.display("SELECT * FROM dbo.view_EMPLOYEE", gridControl1, gridView2);
+            Classes.DevXGridViewSettings.ShowFooterCountTotal(gridView2, "ID");
         }
 
         void execSP(string option)

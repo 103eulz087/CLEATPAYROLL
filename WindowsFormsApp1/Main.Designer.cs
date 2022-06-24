@@ -44,11 +44,9 @@
             this.btnpayrollcode = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
@@ -78,8 +76,7 @@
             this.ribbon.MaxItemId = 12;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
-            this.ribbonPage2});
+            this.ribbonPage1});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Show;
@@ -96,6 +93,7 @@
             // 
             this.barbtnEmployees.Caption = "Employees";
             this.barbtnEmployees.Id = 2;
+            this.barbtnEmployees.ImageOptions.LargeImage = global::WindowsFormsApp1.Properties.Resources.Employee_32x32__2_;
             this.barbtnEmployees.Name = "barbtnEmployees";
             this.barbtnEmployees.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnEmployees_ItemClick);
             // 
@@ -103,6 +101,7 @@
             // 
             this.barbtndesignation.Caption = "Designation";
             this.barbtndesignation.Id = 3;
+            this.barbtndesignation.ImageOptions.LargeImage = global::WindowsFormsApp1.Properties.Resources.Employees_32x32;
             this.barbtndesignation.Name = "barbtndesignation";
             this.barbtndesignation.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtndesignation_ItemClick);
             // 
@@ -110,12 +109,15 @@
             // 
             this.barbtnUsers.Caption = "Users Info";
             this.barbtnUsers.Id = 4;
+            this.barbtnUsers.ImageOptions.LargeImage = global::WindowsFormsApp1.Properties.Resources.UserKey_32x32;
             this.barbtnUsers.Name = "barbtnUsers";
+            this.barbtnUsers.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnUsers_ItemClick);
             // 
             // barbtncashadvance
             // 
             this.barbtncashadvance.Caption = "Cash Advance";
             this.barbtncashadvance.Id = 5;
+            this.barbtncashadvance.ImageOptions.LargeImage = global::WindowsFormsApp1.Properties.Resources.Currency_32x32__2_;
             this.barbtncashadvance.Name = "barbtncashadvance";
             this.barbtncashadvance.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtncashadvance_ItemClick);
             // 
@@ -123,12 +125,15 @@
             // 
             this.barbtnovertime.Caption = "Overtime";
             this.barbtnovertime.Id = 6;
+            this.barbtnovertime.ImageOptions.LargeImage = global::WindowsFormsApp1.Properties.Resources.Time_32x32__2_;
             this.barbtnovertime.Name = "barbtnovertime";
+            this.barbtnovertime.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnovertime_ItemClick);
             // 
             // barbtndeductions
             // 
             this.barbtndeductions.Caption = "Deductions";
             this.barbtndeductions.Id = 7;
+            this.barbtndeductions.ImageOptions.LargeImage = global::WindowsFormsApp1.Properties.Resources.LessThan_32x32;
             this.barbtndeductions.Name = "barbtndeductions";
             this.barbtndeductions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtndeductions_ItemClick);
             // 
@@ -136,6 +141,7 @@
             // 
             this.barbtnprocess.Caption = "Process Payroll";
             this.barbtnprocess.Id = 8;
+            this.barbtnprocess.ImageOptions.LargeImage = global::WindowsFormsApp1.Properties.Resources.Refresh_32x32__5_;
             this.barbtnprocess.Name = "barbtnprocess";
             this.barbtnprocess.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnprocess_ItemClick);
             // 
@@ -143,6 +149,7 @@
             // 
             this.barbtnpayrolllist.Caption = "Payroll List";
             this.barbtnpayrolllist.Id = 9;
+            this.barbtnpayrolllist.ImageOptions.LargeImage = global::WindowsFormsApp1.Properties.Resources.ListByDate_32x32;
             this.barbtnpayrolllist.Name = "barbtnpayrolllist";
             this.barbtnpayrolllist.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnpayrolllist_ItemClick);
             // 
@@ -156,13 +163,17 @@
             // 
             this.btnpayrollcode.Caption = "Payroll Code";
             this.btnpayrollcode.Id = 11;
+            this.btnpayrollcode.ImageOptions.LargeImage = global::WindowsFormsApp1.Properties.Resources.Scheduler_32x32;
             this.btnpayrollcode.Name = "btnpayrollcode";
             this.btnpayrollcode.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnpayrollcode_ItemClick);
             // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup4});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "HOME";
             // 
@@ -172,26 +183,16 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Themes";
             // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup3,
-            this.ribbonPageGroup4,
-            this.ribbonPageGroup5});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "ADMIN TOOLS";
-            // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barbtnEmployees);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barbtnUsers);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "GENERAL ADMINISTRATION";
             // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.barbtndesignation);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barbtnUsers);
             this.ribbonPageGroup3.ItemLinks.Add(this.barbtncashadvance);
             this.ribbonPageGroup3.ItemLinks.Add(this.barbtnovertime);
             this.ribbonPageGroup3.ItemLinks.Add(this.barbtndeductions);
@@ -205,12 +206,6 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.barbtnpayrolllist);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "PROCESSOR";
-            // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "REPORTING";
             // 
             // ribbonStatusBar
             // 
@@ -283,7 +278,6 @@
         public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem2;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barbtnEmployees;
         private DevExpress.XtraBars.BarButtonItem barbtndesignation;
@@ -297,7 +291,6 @@
         private DevExpress.XtraBars.BarButtonItem barbtnpayrolllist;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem btnpayrollcode;
     }
 }

@@ -115,7 +115,7 @@ namespace WindowsFormsApp1.Forms
 
         void updateChange()
         {
-            double daystotal = 0.0,totaldayspaidamount=0.0,paidallowance=0.0;
+            double daystotal = 0.0,totaldayspaidamount=0.0,paidallowance=0.0,tresemonthcurrpay=0.0;
             daystotal=(Convert.ToDouble(txtdaysworked.Value) - Convert.ToDouble(txtabsent.Value) - Convert.ToDouble(txtleavewithpay.Value));
             txtdaystotal.Text = daystotal.ToString();
             totaldayspaidamount = Convert.ToDouble(txtdailyrate.Value) * daystotal;
@@ -131,9 +131,11 @@ namespace WindowsFormsApp1.Forms
             txtnightpremiumamnt.Text = Database.getSingleResultSet($"SELECT dbo.func_getOTRate('{id}','{txtnightpremium.Value}','4')");
 
             //ot adj 13thmnth tax adj
+            //(@parmtotdayswork*@parmrate)/12 tresemonth
+            tresemonthcurrpay = Math.Round((Convert.ToDouble(txtdaysworked.Value) * Convert.ToDouble(txtdailyrate.Value)) / 12,2);
+            txttresemonthcurrpay.Text = tresemonthcurrpay.ToString();
 
-
-            double totalot=0.0,grosspay = 0.0,totaltaxableincome=0.0,totalemployeeshare=0.0;
+            double totalot =0.0,grosspay = 0.0,totaltaxableincome=0.0,totalemployeeshare=0.0;
 
             totalot = Convert.ToDouble(txtregotamnt.Value) + Convert.ToDouble(txtregholotamnt.Value) + Convert.ToDouble(txtspclholotamnt.Value) + Convert.ToDouble(txtnightpremiumamnt.Value);
 
@@ -287,6 +289,7 @@ namespace WindowsFormsApp1.Forms
                 com.Parameters.AddWithValue("@parmallowance", txtpaidallowance.Text);
                 com.Parameters.AddWithValue("@parmtaxadj", txttaxadjadd.Text);
                 com.Parameters.AddWithValue("@parmotadj", txtotadj.Text);
+                com.Parameters.AddWithValue("@parmtresemonthcurrpay", txttresemonthcurrpay.Text);
                 com.Parameters.AddWithValue("@parmtresemonth", txttresemonth.Text);
                 com.Parameters.AddWithValue("@parmgrosspay", txtgrosspay.Text);
 

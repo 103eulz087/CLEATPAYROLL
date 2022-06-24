@@ -23,6 +23,7 @@ namespace WindowsFormsApp1.Forms
 
         private void Designation_Load(object sender, EventArgs e)
         {
+            disablefields();
             display();
         }
         void clear()

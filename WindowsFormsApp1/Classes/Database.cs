@@ -58,7 +58,7 @@ namespace WindowsFormsApp1.Classes
         public static SqlConnection getConnection()
         {
             //regkey = Registry.CurrentUser.CreateSubKey(@"Enzo\ConnSettings");
-            regkey = Registry.CurrentUser.CreateSubKey(@"AAITCRE\ConnSettingsMain");
+            regkey = Registry.CurrentUser.CreateSubKey(@"AAITCRECLEAT\ConnSettingsMain");
             constring = regkey.GetValue("dbconn").ToString();
             SqlConnection con;
             try
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1.Classes
         }
         public static SqlConnection getConnectionUpdater()
         {
-            regkey = Registry.CurrentUser.CreateSubKey(@"AAITCRE\ConnSettingsUpdater");
+            regkey = Registry.CurrentUser.CreateSubKey(@"AAITCRECLEAT\ConnSettingsUpdater");
             constring = regkey.GetValue("dbconn").ToString();
             SqlConnection con;
             try
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1.Classes
         }
         public static SqlConnection getCustomizeConnection()
         {
-            regkey = Registry.CurrentUser.CreateSubKey(@"Enzo\ConnSettingsHRM");
+            regkey = Registry.CurrentUser.CreateSubKey(@"AAITCRECLEAT\ConnSettingsHRM");
             constring = regkey.GetValue("dbconn").ToString();
             SqlConnection con;
             try

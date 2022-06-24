@@ -29,6 +29,7 @@ namespace WindowsFormsApp1.Forms
 
         private void Deductions_Load(object sender, EventArgs e)
         {
+            disablefields();
             display();
             populate();
         }
@@ -58,6 +59,7 @@ namespace WindowsFormsApp1.Forms
         }
         void enablefields()
         {
+            txtempid.Enabled = true;
             txthdmfcalloan.Enabled = true;
             txthdmfhousingloan.Enabled = true;
             txthdmfloan.Enabled = true;

@@ -50,7 +50,17 @@ namespace WindowsFormsApp1
 
         private void barbtnpayrolllist_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Forms.PayrollList))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            Forms.PayrollList housers = new Forms.PayrollList();
+            housers.MdiParent = this;
+            housers.Show();
         }
 
         private void barbtnprocess_ItemClick(object sender, ItemClickEventArgs e)
@@ -100,6 +110,37 @@ namespace WindowsFormsApp1
                 }
             }
             Forms.CashAdvanced housers = new Forms.CashAdvanced();
+            housers.MdiParent = this;
+            housers.Show();
+        }
+
+        private void barbtnUsers_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Forms.Users))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            Forms.Users housers = new Forms.Users();
+            housers.MdiParent = this;
+            housers.Show();
+        }
+
+        private void barbtnovertime_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Forms.Overtime))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            Forms.Overtime housers = new Forms.Overtime();
             housers.MdiParent = this;
             housers.Show();
         }

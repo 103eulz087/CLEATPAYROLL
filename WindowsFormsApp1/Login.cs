@@ -137,12 +137,12 @@ namespace WindowsFormsApp1
         {
             try
             {
-                regkey = Registry.CurrentUser.CreateSubKey(@"AAITCRE\ConnSettingsMain");
+                regkey = Registry.CurrentUser.CreateSubKey(@"AAITCRECLEAT\ConnSettingsMain");
                 if (regkey.GetValue("dbconn") == null)
                 {
                     Connection C = new Connection();
                     C.lblservername.Text = "Main Server";
-                    C.txtconnsettingsname.Text = @"AAITCRE\ConnSettingsMain";
+                    C.txtconnsettingsname.Text = @"AAITCRECLEAT\ConnSettingsMain";
                     C.ShowDialog();
                     this.Opacity = 0;
                     return;

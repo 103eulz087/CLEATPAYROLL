@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
         private void btnsave_Click(object sender, EventArgs e)
         {
             //regkey = Registry.CurrentUser.CreateSubKey(txtconnsettingsname.Text);
-            regkey = Registry.CurrentUser.CreateSubKey(@"AAITCRE\ConnSettingsMain");
+            regkey = Registry.CurrentUser.CreateSubKey(@"AAITCRECLEAT\ConnSettingsMain");
             regkey.SetValue("dbconn", "Data Source=" + txtservername.Text + ";Initial Catalog=" + cbodbname.Text + ";User ID =" + txtserverid.Text + ";Password=" + txtserverpassword.Text + ";Connection Timeout = 3600;Persist Security Info = True;");
             regkey.SetValue("servername", txtservername.Text);
             regkey.SetValue("dbname", cbodbname.Text);

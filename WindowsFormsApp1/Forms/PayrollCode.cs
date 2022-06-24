@@ -27,6 +27,7 @@ namespace WindowsFormsApp1.Forms
 
         private void PayrollCode_Load(object sender, EventArgs e)
         {
+            disablefields();
             display();
         }
 
