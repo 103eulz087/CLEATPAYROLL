@@ -107,5 +107,24 @@ namespace WindowsFormsApp1.Forms
         {
             printRep();
         }
+
+        private void gridControl1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                contextMenuStrip1.Show(gridControl1, e.Location);
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool confirm = HelperFunction.ConfirmDialog("Are you sure you want to delete this Deduction?", "Delete Deduction");
+            if (confirm)
+            {
+                Database.ExecuteQuery($"DELETE FROM dbo.PAYLIST WHERE PAY_ID='{gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "PayID").ToString()}' " +
+                    $"AND EMP_ID='{gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "EmpID").ToString()}'");
+                display();
+            }
+            else
+                return;
+        }
     }
 }

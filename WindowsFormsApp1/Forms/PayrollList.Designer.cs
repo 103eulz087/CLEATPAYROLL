@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayrollList));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnprint = new DevExpress.XtraEditors.SimpleButton();
             this.btnprocess = new DevExpress.XtraEditors.SimpleButton();
             this.txtpayrollcode = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -36,7 +39,8 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnprint = new DevExpress.XtraEditors.SimpleButton();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtpayrollcode.Properties)).BeginInit();
@@ -45,6 +49,7 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -58,6 +63,15 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1082, 76);
             this.groupControl1.TabIndex = 0;
+            // 
+            // btnprint
+            // 
+            this.btnprint.Location = new System.Drawing.Point(487, 35);
+            this.btnprint.Name = "btnprint";
+            this.btnprint.Size = new System.Drawing.Size(93, 25);
+            this.btnprint.TabIndex = 136;
+            this.btnprint.Text = "Print";
+            this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
             // 
             // btnprocess
             // 
@@ -118,6 +132,7 @@
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            this.gridControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridControl1_MouseUp);
             // 
             // gridView2
             // 
@@ -151,14 +166,21 @@
             this.gridView2.OptionsView.ShowFooter = true;
             this.gridView2.ViewCaptionHeight = 0;
             // 
-            // btnprint
+            // contextMenuStrip1
             // 
-            this.btnprint.Location = new System.Drawing.Point(487, 35);
-            this.btnprint.Name = "btnprint";
-            this.btnprint.Size = new System.Drawing.Size(93, 25);
-            this.btnprint.TabIndex = 136;
-            this.btnprint.Text = "Print";
-            this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 52);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // PayrollList
             // 
@@ -180,6 +202,7 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -195,5 +218,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl45;
         private DevExpress.XtraEditors.SimpleButton btnprocess;
         private DevExpress.XtraEditors.SimpleButton btnprint;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

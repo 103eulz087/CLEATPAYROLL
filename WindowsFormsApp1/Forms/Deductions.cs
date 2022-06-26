@@ -46,6 +46,12 @@ namespace WindowsFormsApp1.Forms
             txthdmfloan.Text = "";
             txtssscalloan.Text = "";
             txtsssloan.Text = "";
+            txtsssemp.Text = "";
+            txthdmfemp.Text = "";
+            txtphealthemp.Text = "";
+            txtsssemplyr.Text = "";
+            txthdmfemplyr.Text = "";
+            txtphealthemplyr.Text = "";
         }
 
         void disablefields()
@@ -56,6 +62,12 @@ namespace WindowsFormsApp1.Forms
             txthdmfloan.Enabled = false;
             txtssscalloan.Enabled = false;
             txtsssloan.Enabled = false;
+            txtsssemp.Enabled = false;
+            txthdmfemp.Enabled = false;
+            txtphealthemp.Enabled = false;
+            txtsssemplyr.Enabled = false;
+            txthdmfemplyr.Enabled = false;
+            txtphealthemplyr.Enabled = false;
         }
         void enablefields()
         {
@@ -65,6 +77,12 @@ namespace WindowsFormsApp1.Forms
             txthdmfloan.Enabled = true;
             txtssscalloan.Enabled = true;
             txtsssloan.Enabled = true;
+            txtsssemp.Enabled = true;
+            txthdmfemp.Enabled = true;
+            txtphealthemp.Enabled = true;
+            txtsssemplyr.Enabled = true;
+            txthdmfemplyr.Enabled = true;
+            txtphealthemplyr.Enabled = true;
         }
         void display()
         {
@@ -133,6 +151,12 @@ namespace WindowsFormsApp1.Forms
                 com.Parameters.AddWithValue("@parmhdmfloan", txthdmfloan.Text);
                 com.Parameters.AddWithValue("@parmhdmfcalloan", txthdmfcalloan.Text);
                 com.Parameters.AddWithValue("@parmhdmfhousingloan", txthdmfhousingloan.Text);
+                com.Parameters.AddWithValue("@parmsssemp", txtsssemp.Text);
+                com.Parameters.AddWithValue("@parmhdmfemp", txthdmfemp.Text);
+                com.Parameters.AddWithValue("@parmphealthemp", txtphealthemp.Text);
+                com.Parameters.AddWithValue("@parmsssemplyr", txtsssemplyr.Text);
+                com.Parameters.AddWithValue("@parmhdmfemplyr", txthdmfemplyr.Text);
+                com.Parameters.AddWithValue("@parmphealthemplyr", txtphealthemplyr.Text);
                 com.Parameters.AddWithValue("@parmaddedby", Login.Fullname);
                 com.Parameters.AddWithValue("@parmoption", option);
                 com.CommandTimeout = 180;

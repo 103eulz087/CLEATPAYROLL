@@ -119,7 +119,8 @@ namespace WindowsFormsApp1.Forms
             daystotal=(Convert.ToDouble(txtdaysworked.Value) - Convert.ToDouble(txtabsent.Value) - Convert.ToDouble(txtleavewithpay.Value));
             txtdaystotal.Text = daystotal.ToString();
             totaldayspaidamount = Convert.ToDouble(txtdailyrate.Value) * daystotal;
-            leavewithPay = totaldayspaidamount; //global var
+            //leavewithPay = totaldayspaidamount; //global var
+            leavewithPay = Convert.ToDouble(txtdailyrate.Value) * Convert.ToDouble(txtleavewithpay.Value);
             absentAmount = Convert.ToDouble(txtabsent.Value) * Convert.ToDouble(txtdailyrate.Value);
             paidallowance = Math.Floor(daystotal) * Convert.ToDouble(txtallowance.Value);
            
@@ -142,7 +143,7 @@ namespace WindowsFormsApp1.Forms
             totalOTHours = Convert.ToDouble(txtregothrs.Value) + Convert.ToDouble(txtregholothrs.Value) + Convert.ToDouble(txtspclholothrs.Value) + Convert.ToDouble(txtnightpremium.Value);
             totalOTAmount = totalot;
 
-            grosspay = totaldayspaidamount+ paidallowance + totalot + Convert.ToDouble(txtotadj.Value) + Convert.ToDouble(txttresemonth.Value) + Convert.ToDouble(txttaxadjadd.Value);
+            grosspay = leavewithPay+ totaldayspaidamount + paidallowance + totalot + Convert.ToDouble(txtotadj.Value) + Convert.ToDouble(txttresemonth.Value) + Convert.ToDouble(txttaxadjadd.Value);
             txtgrosspay.Text = grosspay.ToString();
 
             totalemployeeshare = Convert.ToDouble(txtsssemp.Value) + Convert.ToDouble(txthdmfemp.Value) + Convert.ToDouble(txtphealthemp.Value);

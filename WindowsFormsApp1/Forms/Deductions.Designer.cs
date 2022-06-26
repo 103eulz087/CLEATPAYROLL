@@ -44,16 +44,30 @@
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btncancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnupdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btnnew = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
+            this.txtphealthemplyr = new DevExpress.XtraEditors.SpinEdit();
+            this.txthdmfemplyr = new DevExpress.XtraEditors.SpinEdit();
+            this.txtsssemplyr = new DevExpress.XtraEditors.SpinEdit();
+            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
+            this.txtphealthemp = new DevExpress.XtraEditors.SpinEdit();
+            this.txthdmfemp = new DevExpress.XtraEditors.SpinEdit();
+            this.txtsssemp = new DevExpress.XtraEditors.SpinEdit();
+            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtempid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txthdmfhousingloan.Properties)).BeginInit();
@@ -68,6 +82,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtphealthemplyr.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txthdmfemplyr.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsssemplyr.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtphealthemp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txthdmfemp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsssemp.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtempid
@@ -233,6 +253,20 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.labelControl38);
+            this.groupControl1.Controls.Add(this.labelControl39);
+            this.groupControl1.Controls.Add(this.txtphealthemplyr);
+            this.groupControl1.Controls.Add(this.txthdmfemplyr);
+            this.groupControl1.Controls.Add(this.txtsssemplyr);
+            this.groupControl1.Controls.Add(this.labelControl25);
+            this.groupControl1.Controls.Add(this.labelControl26);
+            this.groupControl1.Controls.Add(this.labelControl27);
+            this.groupControl1.Controls.Add(this.txtphealthemp);
+            this.groupControl1.Controls.Add(this.txthdmfemp);
+            this.groupControl1.Controls.Add(this.txtsssemp);
+            this.groupControl1.Controls.Add(this.labelControl22);
+            this.groupControl1.Controls.Add(this.labelControl23);
+            this.groupControl1.Controls.Add(this.labelControl24);
             this.groupControl1.Controls.Add(this.btncancel);
             this.groupControl1.Controls.Add(this.btnupdate);
             this.groupControl1.Controls.Add(this.btnadd);
@@ -254,15 +288,6 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(764, 253);
             this.groupControl1.TabIndex = 150;
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.gridControl1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 253);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(764, 385);
-            this.panelControl1.TabIndex = 151;
             // 
             // btncancel
             // 
@@ -299,6 +324,15 @@
             this.btnnew.TabIndex = 150;
             this.btnnew.Text = "New";
             this.btnnew.Click += new System.EventHandler(this.btnnew_Click);
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.gridControl1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 253);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(764, 385);
+            this.panelControl1.TabIndex = 151;
             // 
             // gridControl1
             // 
@@ -357,9 +391,189 @@
             // 
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(130, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // labelControl38
+            // 
+            this.labelControl38.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl38.Appearance.Options.UseFont = true;
+            this.labelControl38.Location = new System.Drawing.Point(323, 67);
+            this.labelControl38.Name = "labelControl38";
+            this.labelControl38.Size = new System.Drawing.Size(137, 18);
+            this.labelControl38.TabIndex = 167;
+            this.labelControl38.Text = "EMPLOYEE SHARE";
+            // 
+            // labelControl39
+            // 
+            this.labelControl39.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl39.Appearance.Options.UseFont = true;
+            this.labelControl39.Location = new System.Drawing.Point(519, 67);
+            this.labelControl39.Name = "labelControl39";
+            this.labelControl39.Size = new System.Drawing.Size(139, 18);
+            this.labelControl39.TabIndex = 166;
+            this.labelControl39.Text = "EMPLOYER SHARE";
+            // 
+            // txtphealthemplyr
+            // 
+            this.txtphealthemplyr.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtphealthemplyr.Location = new System.Drawing.Point(584, 154);
+            this.txtphealthemplyr.Name = "txtphealthemplyr";
+            this.txtphealthemplyr.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.txtphealthemplyr.Properties.Appearance.Options.UseFont = true;
+            this.txtphealthemplyr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtphealthemplyr.Size = new System.Drawing.Size(97, 24);
+            this.txtphealthemplyr.TabIndex = 165;
+            // 
+            // txthdmfemplyr
+            // 
+            this.txthdmfemplyr.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txthdmfemplyr.Location = new System.Drawing.Point(584, 124);
+            this.txthdmfemplyr.Name = "txthdmfemplyr";
+            this.txthdmfemplyr.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.txthdmfemplyr.Properties.Appearance.Options.UseFont = true;
+            this.txthdmfemplyr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txthdmfemplyr.Size = new System.Drawing.Size(97, 24);
+            this.txthdmfemplyr.TabIndex = 164;
+            // 
+            // txtsssemplyr
+            // 
+            this.txtsssemplyr.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtsssemplyr.Location = new System.Drawing.Point(584, 95);
+            this.txtsssemplyr.Name = "txtsssemplyr";
+            this.txtsssemplyr.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.txtsssemplyr.Properties.Appearance.Options.UseFont = true;
+            this.txtsssemplyr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtsssemplyr.Size = new System.Drawing.Size(97, 24);
+            this.txtsssemplyr.TabIndex = 163;
+            // 
+            // labelControl25
+            // 
+            this.labelControl25.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.labelControl25.Appearance.Options.UseFont = true;
+            this.labelControl25.Location = new System.Drawing.Point(517, 157);
+            this.labelControl25.Name = "labelControl25";
+            this.labelControl25.Size = new System.Drawing.Size(63, 17);
+            this.labelControl25.TabIndex = 162;
+            this.labelControl25.Text = "PhilHealth:";
+            // 
+            // labelControl26
+            // 
+            this.labelControl26.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.labelControl26.Appearance.Options.UseFont = true;
+            this.labelControl26.Location = new System.Drawing.Point(517, 127);
+            this.labelControl26.Name = "labelControl26";
+            this.labelControl26.Size = new System.Drawing.Size(55, 17);
+            this.labelControl26.TabIndex = 161;
+            this.labelControl26.Text = "Pag-Ibig:";
+            // 
+            // labelControl27
+            // 
+            this.labelControl27.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.labelControl27.Appearance.Options.UseFont = true;
+            this.labelControl27.Location = new System.Drawing.Point(517, 98);
+            this.labelControl27.Name = "labelControl27";
+            this.labelControl27.Size = new System.Drawing.Size(29, 17);
+            this.labelControl27.TabIndex = 160;
+            this.labelControl27.Text = "SSS:";
+            // 
+            // txtphealthemp
+            // 
+            this.txtphealthemp.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtphealthemp.Location = new System.Drawing.Point(395, 154);
+            this.txtphealthemp.Name = "txtphealthemp";
+            this.txtphealthemp.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.txtphealthemp.Properties.Appearance.Options.UseFont = true;
+            this.txtphealthemp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtphealthemp.Size = new System.Drawing.Size(97, 24);
+            this.txtphealthemp.TabIndex = 159;
+            // 
+            // txthdmfemp
+            // 
+            this.txthdmfemp.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txthdmfemp.Location = new System.Drawing.Point(395, 124);
+            this.txthdmfemp.Name = "txthdmfemp";
+            this.txthdmfemp.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.txthdmfemp.Properties.Appearance.Options.UseFont = true;
+            this.txthdmfemp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txthdmfemp.Size = new System.Drawing.Size(97, 24);
+            this.txthdmfemp.TabIndex = 158;
+            // 
+            // txtsssemp
+            // 
+            this.txtsssemp.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtsssemp.Location = new System.Drawing.Point(395, 95);
+            this.txtsssemp.Name = "txtsssemp";
+            this.txtsssemp.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.txtsssemp.Properties.Appearance.Options.UseFont = true;
+            this.txtsssemp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtsssemp.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtsssemp.Properties.EditFormat.FormatString = "###.##";
+            this.txtsssemp.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtsssemp.Properties.Mask.EditMask = "####.##";
+            this.txtsssemp.Size = new System.Drawing.Size(97, 24);
+            this.txtsssemp.TabIndex = 157;
+            // 
+            // labelControl22
+            // 
+            this.labelControl22.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.labelControl22.Appearance.Options.UseFont = true;
+            this.labelControl22.Location = new System.Drawing.Point(323, 157);
+            this.labelControl22.Name = "labelControl22";
+            this.labelControl22.Size = new System.Drawing.Size(63, 17);
+            this.labelControl22.TabIndex = 156;
+            this.labelControl22.Text = "PhilHealth:";
+            // 
+            // labelControl23
+            // 
+            this.labelControl23.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.labelControl23.Appearance.Options.UseFont = true;
+            this.labelControl23.Location = new System.Drawing.Point(323, 127);
+            this.labelControl23.Name = "labelControl23";
+            this.labelControl23.Size = new System.Drawing.Size(55, 17);
+            this.labelControl23.TabIndex = 155;
+            this.labelControl23.Text = "Pag-Ibig:";
+            // 
+            // labelControl24
+            // 
+            this.labelControl24.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.labelControl24.Appearance.Options.UseFont = true;
+            this.labelControl24.Location = new System.Drawing.Point(323, 98);
+            this.labelControl24.Name = "labelControl24";
+            this.labelControl24.Size = new System.Drawing.Size(29, 17);
+            this.labelControl24.TabIndex = 154;
+            this.labelControl24.Text = "SSS:";
             // 
             // Deductions
             // 
@@ -386,6 +600,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtphealthemplyr.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txthdmfemplyr.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsssemplyr.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtphealthemp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txthdmfemp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsssemp.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -416,5 +636,19 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editItemsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private DevExpress.XtraEditors.LabelControl labelControl38;
+        private DevExpress.XtraEditors.LabelControl labelControl39;
+        private DevExpress.XtraEditors.SpinEdit txtphealthemplyr;
+        private DevExpress.XtraEditors.SpinEdit txthdmfemplyr;
+        private DevExpress.XtraEditors.SpinEdit txtsssemplyr;
+        private DevExpress.XtraEditors.LabelControl labelControl25;
+        private DevExpress.XtraEditors.LabelControl labelControl26;
+        private DevExpress.XtraEditors.LabelControl labelControl27;
+        private DevExpress.XtraEditors.SpinEdit txtphealthemp;
+        private DevExpress.XtraEditors.SpinEdit txthdmfemp;
+        private DevExpress.XtraEditors.SpinEdit txtsssemp;
+        private DevExpress.XtraEditors.LabelControl labelControl22;
+        private DevExpress.XtraEditors.LabelControl labelControl23;
+        private DevExpress.XtraEditors.LabelControl labelControl24;
     }
 }

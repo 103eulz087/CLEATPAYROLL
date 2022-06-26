@@ -85,7 +85,7 @@ namespace WindowsFormsApp1.Forms
         void populate()
         {
             Database.displaySearchlookupEdit("SELECT DES_ID,DES_NAME as Designation,DES_RATE as Rate,DES_ALLOWANCE as Allowance FROM dbo.DESIGNATION", txtdesignation, "Designation", "Designation");
-            Database.displaySearchlookupEdit("SELECT TAX_ID,TAX_CODE as TaxCode,TAX_DESC as Description FROM dbo.TAXCODE", txttaxstatus, "TaxCode", "TaxCode");
+            Database.displaySearchlookupEdit("SELECT TAX_ID,TAX_CODE as TaxCode,TAX_DESC as Description FROM dbo.TAXCODE", txttaxstatus, "Description", "Description");
         }
 
         private void btnnew_Click(object sender, EventArgs e)
@@ -110,6 +110,8 @@ namespace WindowsFormsApp1.Forms
 
         void execSP(string option)
         {
+            if(option=="2")
+            { designationid =}
                 SqlConnection con = Database.getConnection();
                 con.Open();
                 try
@@ -130,7 +132,7 @@ namespace WindowsFormsApp1.Forms
                     com.Parameters.AddWithValue("@parmsig", "");
                     com.Parameters.AddWithValue("@parmsl", txtnosl.Text);
                     com.Parameters.AddWithValue("@parmvl", txtnovl.Text); 
-                    com.Parameters.AddWithValue("@parmaddedby", "Eulz"); 
+                    com.Parameters.AddWithValue("@parmaddedby", Login.Fullname); 
                     com.Parameters.AddWithValue("@parmoption", option); 
                     com.CommandTimeout = 180;
                     com.CommandType = CommandType.StoredProcedure;
@@ -250,6 +252,7 @@ namespace WindowsFormsApp1.Forms
 
         private void Employees_Load(object sender, EventArgs e)
         {
+            populate();
             disablefields();
             display();
         }
